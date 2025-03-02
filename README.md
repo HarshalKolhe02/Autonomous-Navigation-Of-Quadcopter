@@ -1,6 +1,6 @@
 # Autonomous Navigation of Drone:
 
-# Software requirements:
+## Software requirements:
 - Ubuntu/ Windows WSL
 - Python 3.11
 - Maxproxy
