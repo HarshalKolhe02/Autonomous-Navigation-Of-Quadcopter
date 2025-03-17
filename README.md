@@ -1,10 +1,10 @@
 # Autonomous Navigation of Quadcopter
 This is the Repository for the Autonomous Navigation of Quadcopter.
 
-## 🚀 Project Overview
+## Project Overview
 This project focuses on developing an **autonomous aerial vehicle (quadcopter)** capable of navigating a **GPS-denied environment** using **sensor fusion** and **computer vision**. The drone integrates **Intel Depth Camera, IMU, Optical Flow Meter, and LiDAR** for obstacle detection and path planning. It uses **ArduPilot as the flight controller** and a **Jetson Orin Nano** for real-time processing and AI-driven decision-making.
 
-## 🌟 Features
+## Features
 - ✅ **GPS-Denied Navigation** using IMU, Optical Flow, and LiDAR
 - ✅ **ArUco Marker Tracking** for waypoint navigation
 - ✅ **Autonomous Path Planning** using AI-based algorithms
@@ -14,9 +14,9 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
 
 ---
 
-## 🛠️ System Architecture
+## System Architecture
 
-### 📡 **Hardware Components**
+### **Hardware Components**
 - **Flight Controller**: Cube Orange Plus with:
   - Triple redundant IMUs for fault tolerance.
   - Dual barometers for accurate altitude estimation.
@@ -36,7 +36,7 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
   - **ESCs**: ReadytoSky 40A ESCs for reliable PWM motor control.
   - **Battery**: Orange 4S 5200mAh LiPo, optimized for ~12 minutes of continuous flight.
 
-### 🖥️ **Software Stack**
+### **Software Stack**
 | Component              | Tools/Frameworks Used |
 |------------------------|----------------------|
 | **Flight Control**     | ArduPilot, MAVLink, DroneKit |
@@ -47,7 +47,7 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
 
 ---
 
-## 📜 DroneKit Library Integration
+## DroneKit Library Integration
 
 **DroneKit** is a Python library that allows communication between the companion computer and the flight controller (ArduPilot) via the **MAVLink protocol**. It enables the drone to execute autonomous missions by sending flight commands directly from the companion computer.
 
@@ -60,7 +60,7 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
 
 ---
 
-## 🔄 Task Execution Flow
+## Task Execution Flow
 1️⃣ **Testing Scripts on ArduPilot SITL**:
    - Simulating drone control in a virtual environment.
    - Testing flight stability, mode transitions, and sensor fusion algorithms.<br>
