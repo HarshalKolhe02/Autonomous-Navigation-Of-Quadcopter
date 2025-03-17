@@ -63,13 +63,13 @@ This project focuses on developing an **autonomous aerial vehicle (drone)** capa
 ## 🔄 Task Execution Flow
 1️⃣ **Testing Scripts on ArduPilot SITL**:
    - Simulating drone control in a virtual environment.
-   - Testing flight stability, mode transitions, and sensor fusion algorithms.
+   - Testing flight stability, mode transitions, and sensor fusion algorithms.<br>
 2️⃣ **Performing Takeoff, Hover, and Landing with GPS Enabled**:
    - Verifying basic flight control parameters.
-   - Stabilization testing in real-world conditions.
+   - Stabilization testing in real-world conditions.<br>
 3️⃣ **Navigating to a Series of ArUco Markers**:
    - Testing waypoint-based navigation.
-   - Fine-tuning PID control loops for precision flight.
+   - Fine-tuning PID control loops for precision flight.<br>
 4️⃣ **Executing the Main Tasks**:
    - **Boundary Identification & Mapping**: Using edge detection to recognize arena limits.
    - **Safe Spot Detection**: Plane segmentation with RANSAC for identifying optimal landing sites.
