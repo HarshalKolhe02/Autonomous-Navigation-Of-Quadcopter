@@ -1,8 +1,8 @@
-# Autonomous Navigation of Drone:
+# Autonomous Navigation of Quadcopter
 This is the Repository for the Autonomous Navigation of Quadcopter.
 
 ## 🚀 Project Overview
-This project focuses on developing an **autonomous aerial vehicle (drone)** capable of navigating a **GPS-denied environment** using **sensor fusion** and **computer vision**. The drone integrates **Intel Depth Camera, IMU, Optical Flow Meter, and LiDAR** for obstacle detection and path planning. It uses **ArduPilot as the flight controller** and a **Jetson Orin Nano** for real-time processing and AI-driven decision-making.
+This project focuses on developing an **autonomous aerial vehicle (quadcopter)** capable of navigating a **GPS-denied environment** using **sensor fusion** and **computer vision**. The drone integrates **Intel Depth Camera, IMU, Optical Flow Meter, and LiDAR** for obstacle detection and path planning. It uses **ArduPilot as the flight controller** and a **Jetson Orin Nano** for real-time processing and AI-driven decision-making.
 
 ## 🌟 Features
 - ✅ **GPS-Denied Navigation** using IMU, Optical Flow, and LiDAR
