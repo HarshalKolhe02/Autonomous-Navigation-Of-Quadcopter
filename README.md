@@ -64,7 +64,7 @@ The simulation shown in this section is done by running Ardupilot SITL in WSL an
 In this mission, The Quadcopter is made to reach altitude of 10 meters and hover there for 10 seconds. It then safely lands on the ground.
 Script Used: Takeoff_hover_land.py
 
-[RESULTS](https://drive.google.com/file/d/1KDGGHPJMcpwloq_pPW9UvpG8WnaL4c8A/view?usp=sharing)
+[Result](https://drive.google.com/file/d/1KDGGHPJMcpwloq_pPW9UvpG8WnaL4c8A/view?usp=sharing)
 
 ## Raspberry Pi CubeOrange Integration
 To run Dronekit scripts on Pixhawk, we need to first connect it to Raspberry Pi. This is done using the UART communication protocol. This Pin Map is as follows:   
