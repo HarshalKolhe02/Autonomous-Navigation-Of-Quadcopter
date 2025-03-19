@@ -5,19 +5,19 @@ This is the Repository for the Autonomous Navigation of Quadcopter.
 This project focuses on developing an **autonomous aerial vehicle (quadcopter)** capable of navigating a **GPS-denied environment** using **sensor fusion** and **computer vision**. The drone integrates **Intel Depth Camera, IMU, Optical Flow Meter, and LiDAR** for obstacle detection and path planning. It uses **ArduPilot as the flight controller** and a **Jetson Orin Nano** for real-time processing and AI-driven decision-making.
 
 ## Features
-- ✅ **GPS-Denied Navigation** using IMU, Optical Flow, and LiDAR
-- ✅ **ArUco Marker Tracking** for waypoint navigation
-- ✅ **Autonomous Path Planning** using AI-based algorithms
-- ✅ **Safe Spot Detection** via Depth Maps & Computer Vision
-- ✅ **ArduPilot-Based Flight Control** using Cube Orange Plus
-- ✅ **Failsafe Mechanism** ensuring emergency landing protocols
+- **GPS-Denied Navigation** using IMU, Optical Flow, and LiDAR
+- **ArUco Marker Tracking** for waypoint navigation
+- **Autonomous Path Planning** using AI-based algorithms
+- **Safe Spot Detection** via Depth Maps & Computer Vision
+- **ArduPilot-Based Flight Control** using Cube Orange Plus
+- **Failsafe Mechanism** ensuring emergency landing protocols
 
 ---
 
 ## System Architecture
 
 ### **Hardware Components**
-- **Flight Controller**: Cube Orange Plus with:
+- **Flight Controller**: **Cube Orange Plus:**
   - Triple redundant IMUs for fault tolerance.
   - Dual barometers for accurate altitude estimation.
   - Integrated vibration isolation for sensor stability.
@@ -29,13 +29,12 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
   - **Intel RealSense D435i**: Stereo depth camera with onboard IMU for safe spot detection.
   - **TFMini-S LiDAR**: Compact rangefinder for precision altitude measurements.
   - **PX4Flow Optical Flow Sensor**: Provides velocity estimation in GPS-denied scenarios.
-  - **IMU & Barometer**: Integrated with Cube Orange for precise stabilization.
 - **Frame & Propulsion**:
   - **Frame**: S500 quadcopter frame with carbon fiber structure for durability.
-  - **Motors**: AT2312 1150KV motors providing stable thrust and efficiency.
-  - **ESCs**: ReadytoSky 40A ESCs for reliable PWM motor control.
+  - **Motors**: AirGear 2216 880KV motors providing stable thrust and efficiency.
+  - **ESCs**: AIR 20A ESCs for reliable PWM motor control.
   - **Battery**: Orange 4S 5200mAh LiPo, optimized for ~12 minutes of continuous flight.
-
+d
 ### **Software Stack**
 | Component              | Tools/Frameworks Used |
 |------------------------|----------------------|
@@ -43,7 +42,7 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
 | **Path Planning**      | Python (A*, RRT, AI-Based Navigation) |
 | **Computer Vision**    | OpenCV, PyTorch, Depth Estimation Models |
 | **Obstacle Avoidance** | LiDAR Processing, Optical Flow Algorithms |
-| **Simulation & Testing** | Gazebo, Ardupilot SITL (Software-in-the-Loop), Mission Planner |
+| **Simulation & Testing** | Ardupilot SITL (Software-in-the-Loop), Mission Planner |
 
 ---
 
@@ -59,28 +58,17 @@ This project focuses on developing an **autonomous aerial vehicle (quadcopter)**
 - **Safe Spot Navigation**: After detecting safe landing zones via depth analysis, DroneKit sends the coordinates as waypoints to ArduPilot for precise landing.
 
 ---
+## Simulations
+The simulation shown in this section is done by running Ardupilot SITL in WSL and connecting it with mission Planner and DroneKit script over UDP. 
+# Takeoff Hover and Land
+In this mission, The Quadcopter is made to reach altitude of 10 meters and hover there for 10 seconds. It then safely lands on the ground.
+Script Used: Takeoff_hover_land.py
 
-## Task Execution Flow
-1️⃣ **Testing Scripts on ArduPilot SITL**:
-   - Simulating drone control in a virtual environment.
-   - Testing flight stability, mode transitions, and sensor fusion algorithms.<br>
-2️⃣ **Performing Takeoff, Hover, and Landing with GPS Enabled**:
-   - Verifying basic flight control parameters.
-   - Stabilization testing in real-world conditions.<br>
-3️⃣ **Navigating to a Series of ArUco Markers**:
-   - Testing waypoint-based navigation.
-   - Fine-tuning PID control loops for precision flight.<br>
-4️⃣ **Executing the Main Tasks**:
-   - **Boundary Identification & Mapping**: Using edge detection to recognize arena limits.
-   - **Safe Spot Detection**: Plane segmentation with RANSAC for identifying optimal landing sites.
-   - **Autonomous Navigation**: AI-enhanced path planning and real-time terrain adaptation.
-   - **Failsafe & Emergency Handling**: Battery monitoring, return-to-home automation, and emergency landing.
-
----
-
+Results:
+https://github.com/user-attachments/assets/5d662ba8-c84a-4e62-8b75-26a13ac3feef
 
 ## Raspberry Pi CubeOrange Integration
-To run Dronekit scrpits on Pixhawk, we need to first connect it to Raspberry Pi. This is Done using UART communication protocol. This Pin Map is as follows:   
+To run Dronekit scripts on Pixhawk, we need to first connect it to Raspberry Pi. This is done using the UART communication protocol. This Pin Map is as follows:   
 ### PORT:  **TELEM1**
 Pinout
 | Pin Number | Signal |
