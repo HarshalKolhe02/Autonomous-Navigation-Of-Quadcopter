@@ -60,7 +60,7 @@ d
 ---
 ## Simulations
 The simulation shown in this section is done by running Ardupilot SITL in WSL and connecting it with mission Planner and DroneKit script over UDP. 
-# Takeoff Hover and Land
+### Takeoff Hover and Land
 In this mission, The Quadcopter is made to reach altitude of 10 meters and hover there for 10 seconds. It then safely lands on the ground.
 Script Used: Takeoff_hover_land.py
 
