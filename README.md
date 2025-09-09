@@ -1,5 +1,4 @@
 # Autonomous Navigation of Quadcopter
-This is the Repository for the Autonomous Navigation of Quadcopter.
 
 ## Project Overview
 This project focuses on developing an **autonomous aerial vehicle (quadcopter)** capable of navigating a **GPS-denied environment** using **sensor fusion**.
