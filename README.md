@@ -37,6 +37,34 @@ d
 
 **DroneKit** is a Python library that allows communication between the companion computer and the flight controller (ArduPilot) via the **MAVLink protocol**. It enables the drone to execute autonomous missions by sending flight commands directly from the companion computer.
 
+## Simulations
+The simulation shown in this section is done by running Ardupilot SITL in WSL and connecting it with mission Planner and DroneKit script over UDP. 
+### With GPS
+### Takeoff Hover and Land
+In this mission, The Quadcopter is made to reach altitude of 4 meters and hover there for 10 seconds. It then safely lands on the ground.
+Script Used: Takeoff_hover_land.py
+
+[Takeoff_HOVER_LAND](https://github.com/user-attachments/assets/887cfd7d-f8ff-4e65-b78b-3d585236bdbb)
+
+### Waypoint Navigation
+In this mission, The Quadcopter navigates to offset point given in meters. In this case that offset distance is given as (-5,-5)m.
+
+[waypoint_nav](
+https://github.com/user-attachments/assets/485b6f3c-add1-42d8-9c4e-6b6f46e32a09)
+
+### Without GPS
+### Takeoff Hover and Land
+In this mission, The Quadcopter is made to reach altitude of 4 meters and hover there for 10 seconds. It then safely lands on the ground.
+Script Used: Takeoff_hover_land.py
+
+[Takeoff_HOVER_LAND](https://github.com/user-attachments/assets/887cfd7d-f8ff-4e65-b78b-3d585236bdbb)
+
+### Waypoint Navigation
+In this mission, The Quadcopter navigates to offset point given in meters. In this case that offset distance is given as (-5,-5)m.
+
+[waypoint_nav](
+https://github.com/user-attachments/assets/485b6f3c-add1-42d8-9c4e-6b6f46e32a09)
+
 ## Raspberry Pi CubeOrange Integration
 To run Dronekit scripts on Pixhawk, we need to first connect it to Raspberry Pi. This is done using the UART communication protocol. This Pin Map is as follows:   
 ### PORT:  **TELEM1**
@@ -95,13 +123,7 @@ from dronekit import connect
 vehicle = connect('/dev/ttyAMA0',baud=57600, wait_ready=True)
 print("Connected to MavProxy terminal")
 ```
-## Simulations
-The simulation shown in this section is done by running Ardupilot SITL in WSL and connecting it with mission Planner and DroneKit script over UDP. 
-### Takeoff Hover and Land
-In this mission, The Quadcopter is made to reach altitude of 10 meters and hover there for 10 seconds. It then safely lands on the ground.
-Script Used: Takeoff_hover_land.py
 
-[Result](https://drive.google.com/file/d/1KDGGHPJMcpwloq_pPW9UvpG8WnaL4c8A/view?usp=sharing)
 
 
 
